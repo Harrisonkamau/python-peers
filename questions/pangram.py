@@ -1,8 +1,9 @@
 # -*- coding: utf-8 -*-
 
+import string
 import unittest
 
-from pangram import is_pangram
+#from pangram import is_pangram
 
 
 """
@@ -16,6 +17,21 @@ The best known English pangram is "The quick brown fox jumps over the lazy dog."
 """
 # your function
 
+x = list(string.ascii_lowercase)
+x.append(" ")
+
+def pangram(sentence):
+    
+    status = ""
+    
+    for i in x:
+        if i not in sentence:
+            status = "False"
+        else:
+            status = "Pangram"
+    return status
+            
+print pangram("The quick brown fox jumps over the lazy dog.")
 
 # some tests
 class PangramTests(unittest.TestCase):
