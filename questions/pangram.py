@@ -2,8 +2,6 @@
 
 import unittest
 
-from pangram import is_pangram
-
 
 """
 # Pangram
@@ -14,7 +12,11 @@ Determine if a sentence is a pangram. A pangram (Greek: παν γράμμα, pan
 "every letter") is a sentence using every letter of the alphabet at least once.
 The best known English pangram is "The quick brown fox jumps over the lazy dog."
 """
+
+
 # your function
+def is_pangram(sentence):
+    pass
 
 
 # some tests
