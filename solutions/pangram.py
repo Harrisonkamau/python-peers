@@ -1,0 +1,31 @@
+import unittest
+
+
+def is_pangram(s):
+    return not set('abcdefghijklmnopqrstuvwxyz') - set(s.lower())
+
+
+class PangramTests(unittest.TestCase):
+
+    def test_empty_string(self):
+        self.assertFalse(is_pangram(''))
+
+    def test_valid_pangram(self):
+        self.assertTrue(
+            is_pangram('the quick brown fox jumps over the lazy dog'))
+
+    def test_invalid_pangram(self):
+        self.assertFalse(
+            is_pangram('the quick brown fish jumps over the lazy dog'))
+
+    def test_missing_x(self):
+        self.assertFalse(is_pangram('a quick movement of the enemy will '
+                                    'jeopardize five gunboats'))
+
+    def test_mixedcase_and_punctuation(self):
+        self.assertTrue(is_pangram('"Five quacking Zephyrs jolt my wax bed."'))
+
+    def test_unchecked_german_umlaute(self):
+        self.assertTrue(is_pangram('Victor jagt zwolf Boxkampfer quer'
+        'uber den groben Sylter Deich.'))
+
