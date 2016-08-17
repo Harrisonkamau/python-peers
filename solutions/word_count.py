@@ -1,3 +1,6 @@
+import unittest
+
+
 def word_count(word):
     word_split = word.split()
     for phrase in word_split:
