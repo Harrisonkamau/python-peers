@@ -39,7 +39,10 @@ Have fun!
 
 # your function comes here
 def hey(talk):
-	# some python magic
+
+    for x in talk:
+        if x == '!':
+            return 'Whoa, chill out!'
 
 
 class Tests(unittest.TestCase):
