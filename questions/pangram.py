@@ -3,7 +3,7 @@
 import string
 import unittest
 
-#from pangram import is_pangram
+# from pangram import is_pangram
 
 
 """
@@ -15,27 +15,26 @@ Determine if a sentence is a pangram. A pangram (Greek: παν γράμμα, pan
 "every letter") is a sentence using every letter of the alphabet at least once.
 The best known English pangram is "The quick brown fox jumps over the lazy dog."
 """
+
+
 # your function
 
-x = list(string.ascii_lowercase)
-x.append(" ")
-
-def pangram(sentence):
-    
+def is_pangram(sentence):
     status = ""
-    
-    for i in x:
-        if i not in sentence:
-            status = "False"
-        else:
-            status = "Pangram"
-    return status
-            
-print pangram("The quick brown fox jumps over the lazy dog.")
+
+    x = set(string.ascii_lowercase)-set(sentence.lower())
+    print x
+    if len(x) > 0:
+        return False
+    else:
+        return True
+
+
+print is_pangram('the quick brown fox jumps over the lazy dog')
+
 
 # some tests
 class PangramTests(unittest.TestCase):
-
     def test_empty_string(self):
         self.assertFalse(is_pangram(''))
 
@@ -58,3 +57,6 @@ class PangramTests(unittest.TestCase):
         self.assertTrue(is_pangram('Victor jagt zwölf Boxkämpfer quer über den'
                                    ' großen Sylter Deich.'))
 
+
+if __name__ == '__main__':
+    unittest.main()
