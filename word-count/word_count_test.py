@@ -1,7 +1,43 @@
 # -*- coding: utf-8 -*-
 import unittest
 
+
 from wordcount import word_count
+
+"""
+# Word Count
+
+Write a program that given a phrase can count the occurrences of each word in that phrase.
+
+For example for the input `"olly olly in come free"`
+
+olly: 2
+in: 1
+come: 1
+free: 1
+
+Included are tests for your function
+"""
+
+
+# your function here
+def word_count(phrase):
+    keys = []
+    values = []
+    lists = phrase.split()
+    print lists
+
+    for i in lists:
+        values.append(lists.count(i))
+        keys.append(i)
+
+    d1 = dict(zip(keys, values))
+
+    return d1
+
+
+print word_count("olly olly in come free")
+
 
 
 # to be backwards compatible with the old Python 2.X
@@ -13,7 +49,6 @@ def decode_if_needed(string):
 
 
 class WordCountTests(unittest.TestCase):
-
     def test_count_one_word(self):
         self.assertEqual(
             {'word': 1},
