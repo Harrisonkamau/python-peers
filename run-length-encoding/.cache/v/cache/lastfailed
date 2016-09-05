@@ -1,0 +1,6 @@
+{
+  "run_length_test.py::WordCountTests::test_decode_unicode": true, 
+  "run_length_test.py::WordCountTests::test_decode_with_single": true, 
+  "run_length_test.py::WordCountTests::test_encode_unicode_s": true, 
+  "run_length_test.py::WordCountTests::test_encode_with_single": true
+}
