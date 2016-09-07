@@ -9,4 +9,16 @@ In DNA strings, symbols "A" and "T" are complements of each other, as "C" and "G
 
 
 def dna_strand(DNA):
-    pass
+    list1 = {
+        'A': 'T',
+        'G': 'C',
+        'T': 'A',
+        'C': 'G'
+    }
+
+    complement = ""
+
+    for i in DNA:
+        if i in list1:
+            complement += list1[i]
+    return complement
