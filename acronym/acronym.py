@@ -1,2 +1,7 @@
 def abbreviate(phrase):
-	# your function
+    out = ""
+
+    for i in phrase.upper().split():
+        out += i[0]
+
+    return out

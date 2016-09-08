@@ -25,8 +25,14 @@ def encode(plain):
     cypher = ""
 
     for i in plain.lower():
-        if i.isalpha():
+        if i in list1:
             cypher += list2[list1[i]]
-    return cypher
+        elif i in '0123456789':
+            cypher += i
+        else:
+            continue
+
+    cypher = "".join([cypher[0+i:5+i] + " " for i in range(0, len(cypher), 5)])
+    return cypher.strip()
 
 # print encode("abc")
