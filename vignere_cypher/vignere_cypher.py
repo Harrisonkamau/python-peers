@@ -1,3 +1,4 @@
+# coding=utf-8
 """The Vigenère Cipher is a polyalphabetic substitution cipher.
 The 'key' for a vigenere cipher is a key word.
 
@@ -8,7 +9,3 @@ should return 'ISWXVIBJEXIGGBOCEWKBJEVIGGQS'
 
 Hint: If you've done caesar cipher before, you can use the same idea here
 """
-
-def encode(key, plaintext):
-    pass
-
